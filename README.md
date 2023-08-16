@@ -1,13 +1,14 @@
-# Weather Plugin for WordPress
+# Weather Plugin for WordPress
 Fetch and display weather data based on zip codes using the OpenWeatherMap API.
 
 **Version:** 1.0
+
 **Author:** Fabian Häfliger
 
-## Description
+## Description
 This WordPress plugin allows users to fetch and display weather data for specific zip codes via shortcodes. The data is retrieved from the OpenWeatherMap API and is cached in the database to minimize unnecessary external requests.
 
-## Features
+## Features
 Fetch weather data using OpenWeatherMap API based on zip codes.
 Caches weather data in the database for 10 minutes to reduce external calls.
 Display weather data including temperature, pressure, humidity, sunrise, and sunset.
@@ -24,14 +25,14 @@ After installing and activating the plugin, and providing your API key, you can 
 
 Replace YOUR_ZIP_CODE with the desired zip code.
 
-## Frequently Asked Questions
+## Frequently Asked Questions
+
 **Q: Where can I get an API key for OpenWeatherMap?**
 A: You can sign up and generate an API key on the OpenWeatherMap website.
 
 **Q: How often is the weather data updated?**
 A: The plugin caches the weather data for 10 minutes to reduce the number of external requests. After 10 minutes, the plugin will fetch fresh data from the API.
 
-Changelog
-**1.0**
+## Changelog
 
-Initial release.
+**1.0** Initial release.

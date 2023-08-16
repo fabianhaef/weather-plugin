@@ -4,7 +4,7 @@
  * Fetches weather data from the OpenWeatherMap API based on the provided zip code.
  *
  * @param string $zipcode The zip code for which weather data should be fetched.
- * @return object|array Weather data object on success or an array with error message on failure.
+ * @return object Weather data object on success or an object with error message on failure.
  */
 function fetch_weather_from_api($zipcode) {
     $api_key = get_option('api_key');
@@ -13,23 +13,28 @@ function fetch_weather_from_api($zipcode) {
     $response = wp_remote_get($url);
 
     if (is_wp_error($response)) {
-        return array('error' => 'Error: ' . $response->get_error_message());
+        $error_obj = new stdClass();
+        $error_obj->error = 'Error: ' . $response->get_error_message();
+        return $error_obj;
     }
 
     $body = wp_remote_retrieve_body($response);
     $data = json_decode($body);
 
     if (isset($data->cod) && $data->cod != 200) {
-        return array('error' => 'API Error: ' . $data->message);
+        $error_obj = new stdClass();
+        $error_obj->error = 'API Error: ' . $data->message;
+        return $error_obj;
     }
 
     return $data;
 }
 
+
 /**
  * Generates the HTML representation of the weather data.
  *
- * @param object $data The weather data object.
+ * @param object $data The weather data array.
  * @return string HTML representation of the weather data.
  */
 function generate_weather_html($data) {

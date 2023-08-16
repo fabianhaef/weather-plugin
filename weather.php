@@ -1,12 +1,13 @@
 <?php
 /**
- * Weather Plugin Main File
- *
- * Fetches weather data using zip code via OpenWeatherMap API.
- * 
+ * Plugin Name: Weather Plugin
+ * Plugin URI: https://your-plugin-url.com/
+ * Description: This is a weather plugin using OpenWeatherMap API.
  * @package WeatherPlugin
  * @version 1.0
  * @author Fabian Häfliger
+ * Author URI: https://author-website.com/
+ * License: GPL2
  */
 
 // Directories and Paths

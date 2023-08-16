@@ -84,8 +84,8 @@ function weather_fetch_weather_data($zipcode) {
     } else {
         $data = fetch_weather_from_api($zipcode);
 
-        if (isset($data['error'])) {
-            return $data['error'];
+        if (isset($data->error)) {
+            return $data->error;
         }
 
         $wpdb->insert(

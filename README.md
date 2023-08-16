@@ -21,7 +21,7 @@ Visit the plugin settings page to add your OpenWeatherMap API key.
 Usage
 After installing and activating the plugin, and providing your API key, you can use the following shortcode to display weather data based on a zip code:
 
-`[weather-zip-code zip-code="YOUR_ZIP_CODE"]``
+`[weather-zip-code zip-code="YOUR_ZIP_CODE"]`
 
 Replace YOUR_ZIP_CODE with the desired zip code.
 
